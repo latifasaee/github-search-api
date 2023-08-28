@@ -1,0 +1,44 @@
+@startuml
+class User {
+  id: int
+  email: string
+  password: string
+  role: string
+  approved: Boolean
+  status: string
+  tokens: array
+  timestamps: datetime
+  +registerUser(): {} 
+  +loginUser(): User {}
+  +logOutUser(): User {}
+  +updateUser(): User {}
+  +deleteUser(): user {}
+  +RepoController(): Repos []
+}
+class Admin {
+  +approveUser( userId: str): Bool
+  +rejectUser( userId: str): Bool
+  +deleteUser( userId: str): Bool
+  +getReports( userId: str):  Bool
+  +getUserReports(Unit: str): Reports []
+  +getKeywordReports( keyword:str ): Reports[]
+}
+
+class Search {
+  id: int
+  userId: int
+  keyword: string
+  timestamp: datetime
+  +logSearch(userId, keyword): void
+}
+
+class ReportService {
+  +generateGeneralReport(): return Report Details
+  +generateKeywordReports(): return Keyword Report Details
+}
+
+User --> Search : logs searches
+Admin --> ReportService : generates reports
+ReportService --> Search : gets report data
+Admin --> User : manage
+@enduml

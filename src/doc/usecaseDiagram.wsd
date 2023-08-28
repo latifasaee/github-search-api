@@ -1,0 +1,24 @@
+@startuml
+actor User
+actor Admin
+
+User --> (Register User)
+User --> (User Login)
+User --> (View details)
+User --> (Search Repositories)
+User --> (Update Redisteration Data)
+User --> (LogOut)
+User --> (Delete Account)
+
+Admin --> (Approve Registration)
+Admin --> (Reject User)
+Admin --> (Suspend User)
+Admin --> (Delete User)
+Admin --> (View User details)
+Admin --> (Get User Reports)
+Admin --> (Get Keyword Reports)
+
+@enduml
+
+
+

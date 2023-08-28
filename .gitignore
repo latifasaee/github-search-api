@@ -4,3 +4,4 @@ requests.rest
 .env
 .env/*
 .DS_Store
+npm-debug.log

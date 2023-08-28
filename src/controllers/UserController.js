@@ -18,7 +18,7 @@ const registerUser = async (req, res) => {
         });
 
         await user.save();
-        const token = await User.generateAuthToken();
+        const token = await user.generateAuthToken();
         res.status(201).json({ user, token });
     } catch (e) {
         console.log(e);
