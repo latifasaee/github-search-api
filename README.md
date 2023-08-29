@@ -14,7 +14,7 @@ The GitHub Search App is a web application that allows users to search for GitHu
 ## Prerequisites
 
 - Node.js and npm installed
-- MongoDB or any preferred database system
+- MongoDB database system
 
 ## Getting Started
 
